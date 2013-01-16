@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99999999-9999-9999-9999-999999999999}</ProjectGuid>
+    <CompiledOutputPath>distrib\</CompiledOutputPath>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <Version>1.0.0</Version>
+    <Name>Client</Name>
+    <RootNamespace>Client</RootNamespace>
+    <LastBuildVersion>1.0.0</LastBuildVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="editPage.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="scripts\ApplicationUtils.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\jquery-1.6.4.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\jquery.mobile-1.0.1.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\cordova.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\jquery.mobile-1.2.0.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\knockout-2.2.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\knockout.mapping-latest.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\PageStateManager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\ThemeSelector.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="searchPage.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\ajax-loader.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\icons-18-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\icons-18-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\icons-36-black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\icons-36-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\Nomad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\ios-style.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\jquery.mobile-1.0.1.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\jquery.mobile-1.2.0.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ViewModels\EditPageViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ViewModels\IndexViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ViewModels\SearchPageViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ViewModels\ViewPageViewModel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="viewPage.html">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="style\images" />
+    <Folder Include="ViewModels" />
+    <Folder Include="style" />
+    <Folder Include="scripts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences" />
+  <Target Name="CoreCompile" />
+  <Target Name="CreateManifestResourceNames" />
+  <Target Name="CopyFilesToOutputDirectory">
+    <ItemGroup>
+      <AbsoluteContentDestinations Include="$(OutputPath)%(Content.Identity)" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(AbsoluteContentDestinations)" />
+  </Target>
+</Project>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>VS Nomad CRM App</title>
+</head>
+<body>
+    <div data-role="page" id="SearchPage" data-viewModel="searchPageViewModel">
+
+        <div data-theme="a" data-role="header">
+            <h3>
+                Find A Customer
+            </h3>
+        </div>
+        
+        <div data-role="content">
+            <ul data-bind="foreach: customerArray" data-role="listview" data-filter="true" data-autodividers="true">
+                <li>
+                    <a data-bind="click: $root.viewCustomer, text: DisplayName"></a>
+                </li>
+			</ul>
+        </div>
+        <strong data-bind="text: SelectedCustomer.FirstName"></strong>
+        <div data-theme="a" data-role="footer" data-id="application-footer" data-position="fixed">
+                <h3 style="text-align: right; vertical-align: middle">
+                    Powered by Nomad for Visual Studio
+                </h3>
+            </div>
+    </div>
+</body>
+</html>

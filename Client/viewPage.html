@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>VS Nomad CRM App</title>
+</head>
+<body>
+    <div data-role="page" id="ViewPage" data-viewModel="viewPageViewModel">
+        <div data-role="header" data-theme="a">
+            <h3>
+                View Customer Details
+            </h3>
+        </div>
+        <div data-role="content">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><strong data-bind="text: customer.FirstName"></strong></td>
+                </tr><tr>
+                    <td>Second Name:</td>
+                    <td><strong data-bind="text: customer.SecondName"></strong></td>
+                </tr><tr>
+                    <td>Address:</td>
+                    <td><strong data-bind="text: customer.Address"></strong></td>
+                </tr><tr>
+                    <td>City:</td>
+                    <td><strong data-bind="text: customer.City"></strong></td>
+                </tr><tr>
+                    <td>Zip Code:</td>
+                    <td><strong data-bind="text: customer.ZipCode"></strong></td>
+                </tr><tr>
+                    <td>Phone:</td>
+                    <td><strong data-bind="text: customer.Phone"></strong></td>
+                </tr><tr>
+                    <td>Email:</td>
+                    <td><strong data-bind="text: customer.EMailAddress"></strong></td>
+                </tr>
+            </table>
+            <button data-bind="click: editCustomer">Edit</button>
+            Customer Notes:
+            <table data-bind="foreach: customer.Notes">
+                <tr>
+                    <td><ul><li><strong data-bind="text: Content"></strong></li></ul></td>
+                </tr>
+            </table>
+            
+            <form>
+                <input data-bind="value: newNote"/>
+                <button data-bind="click: addNote">Add</button>
+            </form>
+
+        </div>
+        <div data-theme="a" data-role="footer" data-id="application-footer" data-position="fixed">
+                <h3 style="text-align: right; vertical-align: middle">
+                    Powered by Nomad for Visual Studio
+                </h3>
+            </div>
+    </div>
+</body>
+</html>

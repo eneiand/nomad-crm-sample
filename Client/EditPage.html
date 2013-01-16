@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>VS Nomad CRM App</title>
+</head>
+<body>
+    <div data-role="page" id="EditPage" data-viewModel="editPageViewModel">
+        <div data-role="header" data-theme="a">
+            <h3>Edit Customer Details
+            </h3>
+        </div>
+        <div data-role="content">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td>
+                        <input data-bind="value: customer.FirstName" /></td>
+                </tr>
+                <tr>
+                    <td>Second Name:</td>
+                    <td>
+                        <input data-bind="value: customer.SecondName" /></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>
+                        <input data-bind="value: customer.Address" /></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input data-bind="value: customer.City" /></td>
+                </tr>
+                <tr>
+                    <td>Zip Code:</td>
+                    <td>
+                        <input data-bind="value: customer.ZipCode" /></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>
+                        <input data-bind="value: customer.Phone" /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input data-bind="value: customer.EMailAddress" /></td>
+                </tr>
+            </table>
+            <button data-bind="click: save">Save</button>
+        </div>
+        <div data-theme="a" data-role="footer" data-id="application-footer" data-position="fixed">
+                <h3 style="text-align: right; vertical-align: middle">
+                    Powered by Nomad for Visual Studio
+                </h3>
+            </div>
+    </div>
+</body>
+</html>
