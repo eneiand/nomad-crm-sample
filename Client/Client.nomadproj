@@ -10,6 +10,7 @@
     <Name>Client</Name>
     <RootNamespace>Client</RootNamespace>
     <LastBuildVersion>1.0.0</LastBuildVersion>
+    <BuildCloudVersion>2.0</BuildCloudVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,6 +19,12 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cordova.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="editPage.html">
       <SubType>Content</SubType>
     </Content>
@@ -29,9 +36,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\jquery.mobile-1.0.1.min.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="scripts\cordova.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\jquery.mobile-1.2.0.min.js">
